@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>haml notes</title>
+		<link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+		<style TYPE="text/css">
+			<!--
+			-->
+		</style> 
+		<meta name="generator" content="nanoc 3.1.5">
+	</head>
+	<body>
+
+		<!--<div id="header">-->
+			<!--<ul>-->
+				<!--<li>-->
+				<!---->
+				<!--<span class="breadcrumbs">-->
+					<!--<a href="/">top</a> -->
+					<!--» -->
+					<!---->
+					<!--<a href="/articles/">all articles</a> -->
+					<!--» -->
+					<!---->
+					<!--<a href="/articles/2010-10-28/">haml notes</a> -->
+					<!-- -->
+					<!---->
+					<!--</span>-->
+				<!---->
+				<!--</li>-->
+				<!--</ul>-->
+			<!--</div>-->
+
+		<div id="main">
+			<h2>ruby hash notation</h2>
+
+<p>This:</p>
+
+<pre><code>options = {} 
+options[:open_now] = 
+true options[:filename] = 'jeff.txt' 
+options[:lines_to_read] = 50 
+</code></pre>
+
+<p>is equivalent to:</p>
+
+<pre><code>options = { :open_now =&gt; true, :filename =&gt; 'jeff.txt', :lines_to_read =&gt; 50 } 
+</code></pre>
+
+<h2>haml syntax</h2>
+
+<p>html:</p>
+
+<pre><code>&lt;strong class="code" id="message"&gt;Hello, World!&lt;/strong&gt;
+</code></pre>
+
+<p>haml equivalent:</p>
+
+<pre><code>%strong{:class =&gt; "code", :id =&gt; "message"} Hello, World!
+</code></pre>
+
+<p>i.e.</p>
+
+<pre><code>%&lt;tag&gt;&lt;ruby hash&gt; &lt;content&gt;
+</code></pre>
+
+<p>where the keys of the hash are symbols.</p>
+
+<p><code>class</code> and <code>id</code> attributes are common so can be further abbreviated:</p>
+
+<pre><code>%strong.code#message Hello, World!
+</code></pre>
+
+<p>i.e.</p>
+
+<pre><code>%&lt;tag&gt;.&lt;class&gt;#id &lt;content&gt;
+</code></pre>
+
+<p><code>div</code> tags are common so omitting the tag defaults to thos:</p>
+
+<p>so:</p>
+
+<pre><code>.content Hello, World!
+</code></pre>
+
+<p>expand to:</p>
+
+<pre><code>&lt;div class='content'&gt;Hello, World!&lt;/div&gt;
+</code></pre>
+
+<p>summary:</p>
+
+<pre><code>%strong{:class =&gt; "code", :id =&gt; "message"} Hello, World!
+&lt;strong class='code' id='message'&gt;Hello, World!&lt;/strong&gt;
+
+%strong.code#message Hello, World!
+&lt;strong class='code' id='message'&gt;Hello, World!&lt;/strong&gt;
+
+.content Hello, World!
+&lt;div class='content'&gt;Hello, World!&lt;/div&gt;
+
+.item{:id =&gt; "item#{item.id}"}= item.body
+&lt;div class='item'&gt;
+&lt;/div&gt;
+</code></pre>
+
+			<!--<div id="disqus_thread"></div>-->
+			<!--<script type="text/javascript">-->
+				<!--/**-->
+				 <!--* var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] -->
+				 <!--*/-->
+			<!--var disqus_developer=false;-->
+			<!--var disqus_identifier="http://gglynne.github.com/articles/2010-10-28/";-->
+			<!--var disqus_url="http://gglynne.github.com/articles/2010-10-28/";-->
+
+			<!--(function() {-->
+			 <!--var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
+			 <!--dsq.src = 'http://gglynne.disqus.com/embed.js';-->
+			 <!--(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);-->
+			 <!--})();-->
+		 <!--</script>-->
+		 <!--<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=gglynne">comments powered by Disqus.</a></noscript>-->
+
+		 <!--<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>-->
+
+		 <!--<a href="http://gglynne.github.com/#disqus_thread">Comments</a>-->
+
+	 </div>
+
+
+
+
+	 <div id="sidebar">
+
+		 <ul>
+			 <li><a href="/">top</a></li>
+			 <li><a href="/about/">about</a></li>
+			 <li><a href="/articles/">all</a></li>
+		 </ul>
+
+		 <!--<h2>Documentation</h2>-->
+		 <!--<ul>-->
+			 <!--<li><a href="http://nanoc.stoneship.org/docs/">Documentation</a></li>-->
+			 <!--<li><a href="http://nanoc.stoneship.org/docs/3-getting-started/">Getting Started</a></li>-->
+			 <!--</ul>-->
+		 <!--<h2>Community</h2>-->
+		 <!--<ul>-->
+			 <!--<li><a href="http://groups.google.com/group/nanoc/">Discussion Group</a></li>-->
+			 <!--<li><a href="irc://chat.freenode.net/#nanoc">IRC Channel</a></li>-->
+			 <!--<li><a href="http://projects.stoneship.org/trac/nanoc/">Wiki</a></li>-->
+			 <!--</ul>-->
+	 </div>
+
+	 <!--<script type="text/javascript">-->
+		 <!--var disqus_shortname = 'gglynne';-->
+		 <!--(function () {-->
+		  <!--var s = document.createElement('script'); s.async = true;-->
+		  <!--s.src = 'http://disqus.com/forums/gglynne/count.js';-->
+		  <!--(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);-->
+		  <!--}());-->
+	  <!--</script>-->
+
+  </body>
+</html>
