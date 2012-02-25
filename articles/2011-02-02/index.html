@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>notes</title>
+		<link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+		<style TYPE="text/css">
+			<!--
+			-->
+		</style> 
+		<meta name="generator" content="nanoc 3.1.5">
+	</head>
+	<body>
+
+		<!--<div id="header">-->
+			<!--<ul>-->
+				<!--<li>-->
+				<!---->
+				<!--<span class="breadcrumbs">-->
+					<!--<a href="/">top</a> -->
+					<!--» -->
+					<!---->
+					<!--<a href="/articles/">all articles</a> -->
+					<!--» -->
+					<!---->
+					<!--<a href="/articles/2011-02-02/">notes</a> -->
+					<!-- -->
+					<!---->
+					<!--</span>-->
+				<!---->
+				<!--</li>-->
+				<!--</ul>-->
+			<!--</div>-->
+
+		<div id="main">
+			<h2 id="markdown-pandoc">markdown + pandoc</h2>
+<div class="figure">
+<img src="http://www.google.com/logos/2011/Diego_Rivera-2011-hp.jpg" alt="diego" /><p class="caption">diego</p>
+</div>
+<div style="float: right">
+<img src="http://www.google.com/logos/2011/Diego_Rivera-2011-hp.jpg">
+</div>
+
+<p>http://stackoverflow.com/editing-help</p>
+<div class="figure">
+<img src="url" title="title" alt="alt" /><p class="caption">alt</p>
+</div>
+<p>Standard markdown syntax<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> does not support footnotes, but fortunately pandoc<sup><a href="#fn2" class="footnoteRef" id="fnref2">2</a></sup> does.</p>
+<h3 id="block-quotes">block quotes</h3>
+<p>use email indents:</p>
+<blockquote>
+<p>this is a block quote</p>
+</blockquote>
+<h3 id="verbatim">verbatim</h3>
+<p>use tab indents:</p>
+<pre><code>this is verbatim
+text
+</code></pre>
+<p>note: the first tab indent is ignored, so tab it again to indent it:</p>
+<pre><code>    this is verbatim
+    text
+</code></pre>
+<h3 id="delimited-code-blocks">delimited code blocks</h3>
+<p>use three or more tildas ( tabs, spaces are preserved):</p>
+<pre><code>// reset all the results of this certificate to TODO
+public void ClearResults()
+{                                               
+    if (Row.IsTHISINSPNull()) -&lt;-----------------
+    {                                           |
+    }                                           |
+    else                                        |
+    {                                           |
+        Row.LASTINSP = Row.THISINSP;            |
+    }                                           |
+    Row.SetTHISINSPNull();                      |
+}                                               |
+                                                |
++--+---+-----+--------+                         |
+|  |   |     |        |                         |
++--+---+-----+--------+-------------------------+
+</code></pre>
+<h3 id="horizontal-rules">horizontal rules</h3>
+<p>use three or more dashes</p>
+<hr />
+<h3 id="tables">tables</h3>
+<ul>
+<li>too fiddly : try <a href="http://johnmacfarlane.net/pandoc/README.html#tables">this</a></li>
+</ul>
+<h3 id="strikeout-superscript">strikeout, superscript</h3>
+<p>This <span style="text-decoration: line-through;">is deleted text.</span></p>
+<p>H<sub>2</sub>O is a liquid. 2<sup>10</sup> is 1024.</p>
+<h3 id="digraphs-get-rendered-properly">digraphs get rendered properly</h3>
+<ul>
+<li><p><code>=&gt;</code> --&gt; ⇒</p></li>
+<li><p><code>&lt;&gt;</code> --&gt; ↔</p></li>
+</ul>
+<p>£, €, ¥</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="http://daringfireball.net/projects/markdown/syntax">link</a> <a href="#fnref1" class="footnoteBackLink" title="Jump back to footnote 1">↩</a></p></li>
+<li id="fn2"><p><a href="http://johnmacfarlane.net/pandoc/README.html#footnotes"><code class="url">http://johnmacfarlane.net/pandoc/README.html#footnotes</code></a> <a href="#fnref2" class="footnoteBackLink" title="Jump back to footnote 2">↩</a></p></li>
+</ol>
+</div>
+
+			<!--<div id="disqus_thread"></div>-->
+			<!--<script type="text/javascript">-->
+				<!--/**-->
+				 <!--* var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] -->
+				 <!--*/-->
+			<!--var disqus_developer=false;-->
+			<!--var disqus_identifier="http://gglynne.github.com/articles/2011-02-02/";-->
+			<!--var disqus_url="http://gglynne.github.com/articles/2011-02-02/";-->
+
+			<!--(function() {-->
+			 <!--var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
+			 <!--dsq.src = 'http://gglynne.disqus.com/embed.js';-->
+			 <!--(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);-->
+			 <!--})();-->
+		 <!--</script>-->
+		 <!--<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=gglynne">comments powered by Disqus.</a></noscript>-->
+
+		 <!--<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>-->
+
+		 <!--<a href="http://gglynne.github.com/#disqus_thread">Comments</a>-->
+
+	 </div>
+
+
+
+
+	 <div id="sidebar">
+
+		 <ul>
+			 <li><a href="/">top</a></li>
+			 <li><a href="/about/">about</a></li>
+			 <li><a href="/articles/">all</a></li>
+		 </ul>
+
+		 <!--<h2>Documentation</h2>-->
+		 <!--<ul>-->
+			 <!--<li><a href="http://nanoc.stoneship.org/docs/">Documentation</a></li>-->
+			 <!--<li><a href="http://nanoc.stoneship.org/docs/3-getting-started/">Getting Started</a></li>-->
+			 <!--</ul>-->
+		 <!--<h2>Community</h2>-->
+		 <!--<ul>-->
+			 <!--<li><a href="http://groups.google.com/group/nanoc/">Discussion Group</a></li>-->
+			 <!--<li><a href="irc://chat.freenode.net/#nanoc">IRC Channel</a></li>-->
+			 <!--<li><a href="http://projects.stoneship.org/trac/nanoc/">Wiki</a></li>-->
+			 <!--</ul>-->
+	 </div>
+
+	 <!--<script type="text/javascript">-->
+		 <!--var disqus_shortname = 'gglynne';-->
+		 <!--(function () {-->
+		  <!--var s = document.createElement('script'); s.async = true;-->
+		  <!--s.src = 'http://disqus.com/forums/gglynne/count.js';-->
+		  <!--(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);-->
+		  <!--}());-->
+	  <!--</script>-->
+
+  </body>
+</html>
